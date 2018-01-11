@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a single item 1`] = `
+<div>
+  <Link
+    replace={false}
+    to="/edit/2"
+  >
+    <h3>
+      Test2
+    </h3>
+  </Link>
+  <p>
+    5000
+     - 
+    -345600000
+     
+  </p>
+  <button
+    onClick={[Function]}
+  >
+    Delete
+  </button>
+</div>
+`;
