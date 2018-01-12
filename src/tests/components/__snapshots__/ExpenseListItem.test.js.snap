@@ -11,9 +11,9 @@ exports[`should render a single item 1`] = `
     </h3>
   </Link>
   <p>
-    5000
+    $50.00
      - 
-    -345600000
+    6/12/1969
      
   </p>
   <button
