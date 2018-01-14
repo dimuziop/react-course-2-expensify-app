@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render with total 1`] = `
+<div>
+  <h1>
+    Viewing 
+    5
+     - Totalling 
+    $81.45
+     
+  </h1>
+</div>
+`;
+
+exports[`should render without total 1`] = `<div />`;
