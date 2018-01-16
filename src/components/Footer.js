@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => (
     <header>
-            <p>Hello! this fucking shittie has been created by me, tomorrow at morning</p>
+            <p>Hello! Test API</p>
     </header>
 );
 
