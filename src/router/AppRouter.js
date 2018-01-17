@@ -1,6 +1,6 @@
 import React from 'react';
-import {BrowserRouter, Route, Switch, Link, NavLink} from 'react-router-dom'
-import Header from '../components/Header';
+import {Router, Route, Switch, Link, NavLink} from 'react-router-dom'
+import createHistory from 'history/createBrowserHistory';
 import ExpenseDashboardPage from './../components/ExpenseDashboardPage';
 import AddExpensePage from './../components/AddExpensePage';
 import EditExpensePage from './../components/EditExpensePage';
@@ -8,23 +8,24 @@ import LoginPage from './../components/LoginPage'
 import HelpPage from './../components/HelpPage';
 import NotFoundPage from './../components/NotFoundPage';
 import Footer from './../components/Footer';
+import PrivateRoute from './PrivateRoutes';
+import PublicRoute from './PublicRoutes';
 
+export const history = createHistory();
 
 const AppRouter = (props) =>(
-    <BrowserRouter>
+    <Router history={history}>
         <div>
-            <Header />
             <Switch>
-                <Route path={"/"} component={LoginPage} exact={true}/>
-                <Route path={"/dashboard"} component={ExpenseDashboardPage} visibleExpenses={props.visibleExpenses} />
-                <Route path={"/create"} component={AddExpensePage}/>
-                <Route path={"/edit/:id"} component={EditExpensePage}/>
-                <Route path={"/help"} component={HelpPage}/>
+                <PublicRoute path={"/"} component={LoginPage} exact={true}/>
+                <PrivateRoute path={"/dashboard"} component={ExpenseDashboardPage} visibleExpenses={props.visibleExpenses} />
+                <PrivateRoute path={"/create"} component={AddExpensePage}/>
+                <PrivateRoute path={"/edit/:id"} component={EditExpensePage}/>
                 <Route component={NotFoundPage}/>
             </Switch>
             <Footer />
         </div>
 
-    </BrowserRouter>
+    </Router>
 );
 export default  AppRouter;
