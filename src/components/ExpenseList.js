@@ -4,14 +4,18 @@ import ExpenseListItem from './ExpenseListItem';
 import selectExpenses from '../selectors/expenses';
 
 export const ExpenseList = (props) => (
-    <div>
-        <h1>Expense List</h1>
+    <div className={"content-container"}>
+        <div className={"list-header"}>
+            <div className={"show-for-mobile"}>Expenses List</div>
+            <div className={"show-for-desktop"}>Expense</div>
+            <div className={"show-for-desktop"}>Amount</div>
+        </div>
         {
             props.expenses.length === 0 ? (
                 <p>No expenses added yet</p>
-            ): (
-                props.expenses.map((expense)=>{
-                    return <ExpenseListItem key={expense.id} {...expense} />
+            ) : (
+                props.expenses.map((expense) => {
+                    return <div className={"overflow"}><ExpenseListItem key={expense.id} {...expense} /></div>
                 })
             )
         }
@@ -20,7 +24,7 @@ export const ExpenseList = (props) => (
 
 const mapStateToProps = (state) => {
     return {
-        expenses:selectExpenses(state.expenses, state.filters)
+        expenses: selectExpenses(state.expenses, state.filters)
     };
 };
 

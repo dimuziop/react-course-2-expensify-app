@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Footer = () => (
-    <header>
-            <p>Hello! Test API</p>
+    <header className={"footer"}>
+            <p className={"footer_paragraph"}>Hello! Test API - Patricio Di Muzio</p>
     </header>
 );
 

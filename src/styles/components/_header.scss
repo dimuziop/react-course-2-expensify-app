@@ -1,0 +1,19 @@
+.header{
+  background-color: $main-gray;
+  height: 10vh;
+}
+.header__content{
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: $s-size $s-size;
+}
+.header__title{
+  color: white;
+  text-decoration: none;
+  font-size: $m-size;
+ h1{
+   font-family: Roboto, Helvetica, "sans-serif";
+   margin: 0;
+ }
+}

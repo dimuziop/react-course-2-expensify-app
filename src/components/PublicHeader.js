@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import { startLogout } from '../actions/auth';
 
 const PublicHeader = ({startLogout}) => (
-    <header>
-        <h1>Expensify</h1>
+    <header className={"public-header"}>
+        <h1 className={"header__title"}>Expensify</h1>
     </header>
 );
 

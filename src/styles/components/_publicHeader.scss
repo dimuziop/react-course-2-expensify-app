@@ -1,0 +1,11 @@
+.public-header {
+  background-color: $main-green;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__title{
+ color: $main-gray;
+  font-size: $l-size;
+}

@@ -5,7 +5,7 @@ import ConectedExpensesSummary from './ExpensesSummary';
 
 
 const ExpenseDashboardPage = (props) => (
-    <div>
+    <div className={'dashboard-wrapper'}>
         <ConectedExpensesSummary />
         <ExpenseListFilters />
         <ConectedExpenseList />
